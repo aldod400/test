@@ -37,7 +37,7 @@ class RegisterSerializer(serializers.ModelSerializer):
     )
     
     role = serializers.ChoiceField(choices=Role.choices, default=Role.USER)
-    photo = serializers.ImageField(required = True, error_messages = {'required': 'Please provide your Photo.'})
+    # photo = serializers.ImageField(required = True, error_messages = {'required': 'Please provide your Photo.'})
       
     class Meta:
         model = UserProfile
