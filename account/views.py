@@ -27,7 +27,7 @@ def register(request):
             address = serializer.validated_data['address'],
             city    = serializer.validated_data['city'],
             role  = serializer.validated_data['role'],
-            # photo = serializer.validated_data['photo'],
+            photo = "add/aa.jpg",
         )
         user_profile.save()
         token = Token.objects.create(user = user_profile)
